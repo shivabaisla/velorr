@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c0b14">
+<title>VELORR — Your Community</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="./"><span class="logo">V</span> VELORR</a><button id="profileButton" class="avatar" aria-label="Profile">S</button></header>
+<main>
+<section class="welcome"><p class="eyebrow">YOUR SPACE. YOUR PEOPLE.</p><h1>Welcome to<br><span>your world.</span></h1><p class="sub">Connect with friends. Find your people.</p></section>
+<section class="auth-card" id="authCard"><div class="section-heading"><h2 id="authTitle">Join VELORR</h2><span class="live" id="authStatus">SIGNED OUT</span></div>
+<form id="authForm" class="auth-form"><label>Email<input id="authEmail" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+<label>Password<input id="authPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters"></label>
+<label id="usernameWrap">Username<input id="authUsername" type="text" autocomplete="nickname" minlength="3" maxlength="24" placeholder="Your username"></label>
+<p class="auth-note" id="authNote">Create an account or sign in to continue.</p><div class="auth-actions"><button id="authSubmit" class="text-btn" type="submit">Sign up</button><button id="authToggle" class="text-btn secondary-btn" type="button">I already have an account</button><button id="signOutButton" class="text-btn secondary-btn" type="button" hidden>Sign out</button></div></form></section>
+<label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search servers or channels..." aria-label="Search servers or channels"></label>
+<section class="section"><div class="section-heading"><h2>Your servers</h2><button id="addServer" class="text-btn" type="button">＋ Create</button></div><div id="servers" class="server-list"></div><p id="emptyServers" class="empty" hidden>No servers found.</p></section>
+<section class="section"><div class="section-heading"><div><h2 id="channelHeading">Channels</h2><p id="selectedServerLabel" class="section-subtitle">Choose a server</p></div><button id="addChannel" class="text-btn" type="button">＋ Channel</button></div><div id="channels" class="channel-list"></div><p id="emptyChannels" class="empty" hidden>No channels found.</p></section>
+<section class="section"><div class="section-heading"><h2>Chat preview</h2><span class="live">● LOCAL DEMO</span></div><div class="chat-card"><div class="chat-title"><span id="chatIcon" class="chat-hash">#</span><div><b id="chatName">general</b><small id="chatSubtitle">VELORR</small></div></div><div id="messages" class="messages" aria-live="polite"></div><form id="chatForm" class="composer"><input id="messageInput" maxlength="2000" placeholder="Message this channel..." autocomplete="off" aria-label="Write a message"><button type="submit" aria-label="Send message">➤</button></form><p class="hint">Local demo · Messages are saved only in this browser, not sent to other users.</p></div></section>
+<section class="section"><div class="section-heading"><h2>Make it yours</h2></div><div class="feature-grid"><article class="feature"><span>✦</span><b>Find friends</b><small>Meet your people</small></article><article class="feature"><span>◉</span><b>Voice rooms</b><small>Coming soon</small></article><article class="feature"><span>⌘</span><b>Your community</b><small>Build together</small></article><article class="feature"><span>↗</span><b>Your profile</b><small>Be yourself</small></article></div></section>
+</main>
+<nav class="bottom-nav" aria-label="Main navigation"><button class="nav-item selected" data-page="Home" type="button"><span>⌂</span><small>Home</small></button><button class="nav-item" data-page="Friends" type="button"><span>♧</span><small>Friends</small></button><button class="nav-item" data-page="Messages" type="button"><span>▤</span><small>Messages</small></button><button class="nav-item" data-page="Profile" type="button"><span>◉</span><small>Profile</small></button></nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./app.js" defer></script>
+</body></html>
