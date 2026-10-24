@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,84 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101018">
   <title>VELORR — Your Community</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><span class="logo">V</span> VELORR</div>
-    <button class="avatar" aria-label="Your profile">S</button>
+    <div class="brand">
+      <span class="logo">V</span> VELORR
+    </div>
+    <button class="avatar" id="profileButton" aria-label="Profile">S</button>
   </header>
 
   <main>
     <section class="welcome">
       <p class="eyebrow">YOUR SPACE. YOUR PEOPLE.</p>
       <h1>Welcome to<br><span>your world.</span></h1>
-      <p class="sub">Connect with friends. Find your people.</p>
+      <p class="sub">Create communities. Build your world.</p>
     </section>
 
     <section class="search">
       <span>⌕</span>
-      <input id="search" placeholder="Search friends or communities..."
-             aria-label="Search friends or communities">
+      <input id="search" placeholder="Search servers or channels..."
+        aria-label="Search servers or channels">
     </section>
 
     <section class="section">
       <div class="section-heading">
-        <h2>Your spaces</h2>
+        <h2>Your servers</h2>
         <button id="addServer" class="text-btn">+ Create</button>
       </div>
-      <div id="servers" class="server-list">
-        <button class="server active" data-name="General">
-          <span class="server-icon purple">V</span>
-          <span><b>Velorr Lounge</b><small>General chat</small></span>
-          <span class="dot"></span>
-        </button>
-        <button class="server" data-name="Gaming">
-          <span class="server-icon blue">G</span>
-          <span><b>Gaming Hub</b><small>Play together</small></span>
-        </button>
-        <button class="server" data-name="Friends">
-          <span class="server-icon pink">F</span>
-          <span><b>Friends Zone</b><small>Your people</small></span>
-        </button>
-      </div>
+      <div id="servers" class="server-list"></div>
+      <p id="emptyServers" class="hint" hidden>No servers found.</p>
     </section>
 
     <section class="section">
       <div class="section-heading">
-        <h2>Quick message</h2>
-        <span class="live">● YOUR SPACE</span>
+        <h2 id="channelHeading">Channels</h2>
+        <button id="addChannel" class="text-btn">+ Create</button>
       </div>
+      <p id="selectedServerLabel" class="hint"></p>
+      <div id="channels" class="server-list"></div>
+      <p id="emptyChannels" class="hint" hidden>No channels found.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2 id="chatSectionTitle">Channel chat</h2>
+        <span class="live">● LOCAL DEMO</span>
+      </div>
+
       <div class="chat-card">
         <div class="chat-title">
-          <span class="server-icon purple">V</span>
-          <div><b id="chatName">Velorr Lounge</b>
-          <small>Community preview</small></div>
+          <span id="chatIcon" class="server-icon purple">#</span>
+          <div>
+            <b id="chatName">general</b>
+            <small id="chatSubtitle">Text channel</small>
+          </div>
         </div>
-        <div id="messages" class="messages">
-          <p class="system">Welcome to VELORR 👋</p>
-          <p class="bubble">Your community starts here.</p>
-        </div>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
         <form id="chatForm" class="composer">
-          <input id="messageInput" placeholder="Write a message..."
-                 autocomplete="off" aria-label="Write a message">
+          <input id="messageInput" maxlength="2000"
+            placeholder="Write a message..." autocomplete="off"
+            aria-label="Write a message">
           <button aria-label="Send message" type="submit">➤</button>
         </form>
-        <p class="hint">Local demo · Messages aren't sent to other users yet.</p>
+
+        <p class="hint">Messages are saved on this device only.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-heading"><h2>Make it yours</h2></div>
+      <div class="section-heading"><h2>Community tools</h2></div>
       <div class="feature-grid">
-        <div class="feature"><span>✦</span><b>Find friends</b>
-          <small>Meet your people</small></div>
-        <div class="feature"><span>◉</span><b>Voice rooms</b>
-          <small>Coming soon</small></div>
-        <div class="feature"><span>⌘</span><b>Your community</b>
-          <small>Build together</small></div>
-        <div class="feature"><span>↗</span><b>Your profile</b>
-          <small>Be yourself</small></div>
+        <div class="feature">
+          <span>✦</span><b>Your servers</b>
+          <small>Create your own community</small>
+        </div>
+        <div class="feature">
+          <span>#</span><b>Text channels</b>
+          <small>Separate rooms for conversations</small>
+        </div>
+        <div class="feature">
+          <span>♙</span><b>Roles</b>
+          <small>Permission system planned</small>
+        </div>
+        <div class="feature">
+          <span>✉</span><b>Direct messages</b>
+          <small>Private chat planned</small>
+        </div>
       </div>
     </section>
   </main>
@@ -95,6 +105,9 @@
     <button class="nav-item" data-page="Profile">◉<small>Profile</small></button>
   </nav>
 
-  <script src="app.js"></script>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js"></script>
 </body>
 </html>
+
