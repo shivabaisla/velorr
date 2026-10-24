@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101018">
+  <title>VELORR — Your Community</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">V</span> VELORR</div>
+    <button class="avatar" aria-label="Your profile">S</button>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <p class="eyebrow">YOUR SPACE. YOUR PEOPLE.</p>
+      <h1>Welcome to<br><span>your world.</span></h1>
+      <p class="sub">Connect with friends. Find your people.</p>
+    </section>
+
+    <section class="search">
+      <span>⌕</span>
+      <input id="search" placeholder="Search friends or communities..."
+             aria-label="Search friends or communities">
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Your spaces</h2>
+        <button id="addServer" class="text-btn">+ Create</button>
+      </div>
+      <div id="servers" class="server-list">
+        <button class="server active" data-name="General">
+          <span class="server-icon purple">V</span>
+          <span><b>Velorr Lounge</b><small>General chat</small></span>
+          <span class="dot"></span>
+        </button>
+        <button class="server" data-name="Gaming">
+          <span class="server-icon blue">G</span>
+          <span><b>Gaming Hub</b><small>Play together</small></span>
+        </button>
+        <button class="server" data-name="Friends">
+          <span class="server-icon pink">F</span>
+          <span><b>Friends Zone</b><small>Your people</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Quick message</h2>
+        <span class="live">● YOUR SPACE</span>
+      </div>
+      <div class="chat-card">
+        <div class="chat-title">
+          <span class="server-icon purple">V</span>
+          <div><b id="chatName">Velorr Lounge</b>
+          <small>Community preview</small></div>
+        </div>
+        <div id="messages" class="messages">
+          <p class="system">Welcome to VELORR 👋</p>
+          <p class="bubble">Your community starts here.</p>
+        </div>
+        <form id="chatForm" class="composer">
+          <input id="messageInput" placeholder="Write a message..."
+                 autocomplete="off" aria-label="Write a message">
+          <button aria-label="Send message" type="submit">➤</button>
+        </form>
+        <p class="hint">Local demo · Messages aren't sent to other users yet.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>Make it yours</h2></div>
+      <div class="feature-grid">
+        <div class="feature"><span>✦</span><b>Find friends</b>
+          <small>Meet your people</small></div>
+        <div class="feature"><span>◉</span><b>Voice rooms</b>
+          <small>Coming soon</small></div>
+        <div class="feature"><span>⌘</span><b>Your community</b>
+          <small>Build together</small></div>
+        <div class="feature"><span>↗</span><b>Your profile</b>
+          <small>Be yourself</small></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-item selected" data-page="Home">⌂<small>Home</small></button>
+    <button class="nav-item" data-page="Friends">♧<small>Friends</small></button>
+    <button class="nav-item" data-page="Messages">▤<small>Messages</small></button>
+    <button class="nav-item" data-page="Profile">◉<small>Profile</small></button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
