@@ -114,3 +114,30 @@ h2 { font-size: 17px; margin: 0; }
 @media (min-width: 600px) {
   main { padding-top: 30px; }
 }
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #292936;
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--muted);
+  text-align: left;
+}
+
+.channel.active {
+  background: #282238;
+  border-color: var(--purple);
+  color: var(--text);
+}
+
+.channel-icon {
+  color: var(--cyan);
+  font-weight: 800;
+}
+
+#selectedServerLabel {
+  margin: 0 0 12px;
+}
