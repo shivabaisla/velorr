@@ -7,8 +7,8 @@ const STORAGE_KEY = "velorr_local_v1";
 
 /* Add your Supabase Project URL and Publishable key here.
    Never use a service_role key or sb_secret_ key in browser code. */
-const SUPABASE_URL = "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE";
-const SUPABASE_PUBLISHABLE_KEY = "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE";
+const SUPABASE_URL = "https://gvvmhhqjjkepvbhthlmu.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_XZfB3-x0BrkdBA4Ly6N7wA_ib-ujYFT";
 
 let supabaseClient = null;
 let authMode = "signup";
